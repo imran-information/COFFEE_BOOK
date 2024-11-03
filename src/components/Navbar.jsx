@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Navbar = () => {
     return (
         <div className="navbar backdrop-blur-xl z-50 fixed bg-white/10 px-28 py-3">
@@ -37,6 +38,7 @@ const Navbar = () => {
                     <NavLink className={({ isActive }) => `${isActive ? 'text-warning' : 'hover:text-warning'}`} to="/dashboard">Dashboard</NavLink>
                 </ul>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
